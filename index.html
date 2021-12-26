@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>merry christmas!!!!!!!!!</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+      <div class="containerss">
+        <p id="demo"></p>
+        passcode <input type="text" id="myText" placeholder="input here">
+        
+        <button onclick="myFunction()" id="dottedb">Go</button>
+        <p id="bottomtext"><i>no hyphens, punctuation or spaces</i> </p>
+		<h2 style='text-align: center;'>🎄🎄🎄🎄🎄🎄🎄🎄🎄🎄</h2>
+        
+
+      </div>
+   
+
+		<div style="position: absolute; bottom: 5px; color: rgb(70, 70, 70)">
+		<i>created by ayush in 2021</i>
+		</div>
+
+
+    
+    <script>
+    var url = window.location.href // for current url
+    var captured = /error=([^&]+)/.exec(url)[1]; // Value is in [1] ('384' in our case)
+    var result = captured ? captured : '';
+    if (result == '1') {
+        document.getElementById("demo").innerHTML = "Invalid Code";
+    }
+
+    function myFunction() {
+      var x = document.getElementById("myText").value;
+      if(x.length != 0 ){
+      document.getElementById("demo").innerHTML = '🎄unlocking...🎄';
+        setTimeout(function(){
+            window.location.href = "/" + x + ".html";
+            }, 500);
+            
+      }
+    }
+    </script>
+    <script src="index.js"></script>
+  </body>
+</html>
